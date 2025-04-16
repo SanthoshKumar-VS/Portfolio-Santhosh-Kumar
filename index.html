@@ -18,88 +18,76 @@
     <section class="hero">
         <div class="main-width">
             <header>
-                <!-- Hamburger Menu -->
-                <div class="hamb">
-                    <div class="click">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
                 <!-- Logo -->
                 <div class="logo">
                     <span class="custom-logo">SK</span>
                 </div>
 
-                <!-- Mobile Menu Toggle Button -->
-                <div class="menu-toggle" id="menu-toggle">
-                    <i class="fa fa-bars"></i>
-                </div>
+                <!-- Hero Section with Navigation Above Text -->
+                <!-- Hero Section with Navigation Above Text -->
+                <div class="container">
+                    <!-- Navigation Links Above 'Hey Guys!' -->
+                    <nav>
+                        <ul class="nav-list" id="nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About me</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li>
+                                <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
+                                    <i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                            </li>
+                            <li class="btn"><a href="contact.html">Contact Me</a></li>
+                        </ul>
+                    </nav>
 
-                <!-- Navigation Links -->
-                <nav>
-                    <ul class="nav-list" id="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About me</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li>
-                            <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
-                                <i class="fa-solid fa-file-arrow-down"></i> Resume</a>
-                        </li>
-                        <li class="btn"><a href="contact.html">Contact Me</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <!-- Hero Section -->
-            <div class="container">
-                <div class="hero-text">
-                    <h3>Hey, Guys !</h3>
-                    <h1>I am <span class="input"></span></h1>
-                    <p>Engineering student, aspiring CTO</p><br>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/SanthoshKumar-VS" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                    <!-- Hero Text -->
+                    <div class="hero-text">
+                        <h3>Hey, Guys !</h3>
+                        <h1>I am <span class="input"></span></h1>
+                        <p>Engineering student, aspiring CTO</p><br>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/SanthoshKumar-VS" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        </div>
+                        <a href="https://www.linkedin.com/in/vssanthoshKumar" target="_blank"><button type="button">For more information</button></a>
                     </div>
-                    <a href="https://www.linkedin.com/in/vssanthoshKumar" target="_blank"><button type="button">For more information</button></a>
+
+                    <!-- Footer -->
+                    <div class="bottom">
+                        <p>© 2025 Santhosh Portfolio - All Rights Reserved.</p>
+                    </div>
                 </div>
-                <div class="bottom">
-                    <p>© 2025 Santhosh Portfolio - All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-    <!-- Typed.js Script for Animation -->
-    <script>
-        var typed = new Typed(".input", {
-            strings: ["Santhosh Kumar", "final year Engineering student", "Software Engineer", "Film Maker", "Music Producer"],
-            typespeed: 2,
-            backspeed: 5,
-            loop: true
-        });
-    </script>
+                <script type="text/javascript" src="js/script.js"></script>
+                <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-    <!-- Toggle Navigation Script -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navList = document.getElementById('nav-list');
+                <!-- Typed.js Script for Animation -->
+                <script>
+                    var typed = new Typed(".input", {
+                        strings: ["Santhosh Kumar", "final year Engineering student", "Software Engineer", "Film Maker", "Music Producer"],
+                        typespeed: 2,
+                        backspeed: 5,
+                        loop: true
+                    });
+                </script>
 
-        // Toggle menu visibility on click
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
+                <!-- Toggle Navigation Script -->
+                <script>
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const navList = document.getElementById('nav-list');
 
-        // Hamburger Menu Toggle Script
-        const hambMenu = document.querySelector('.click');
-        hambMenu.addEventListener('click', function() {
-            navList.classList.toggle('active');
-        });
-    </script>
+                    // Toggle menu visibility on click
+                    menuToggle.addEventListener('click', () => {
+                        navList.classList.toggle('active');
+                    });
+
+                    // Hamburger Menu Toggle Script
+                    const hambMenu = document.querySelector('.click');
+                    hambMenu.addEventListener('click', function() {
+                        navList.classList.toggle('active');
+                    });
+                </script>
 
 </body>
 
