@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Santhosh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #121212;
+            /* Optional dark background for better contrast */
+        }
+        
+        .contact-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+        
+        .contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            width: 100%;
+            background-color: #1e1e1e;
+            /* Optional styling */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.2);
+            flex-direction: column;
+        }
+        
+        .contact-info {
+            background-color: #2b2b2b;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.2);
+            color: white;
+            width: 100%;
+            text-align: left;
+        }
+        
+        input,
+        textarea {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        input::placeholder,
+        textarea::placeholder {
+            color: #aaa;
+        }
+        
+        button {
+            padding: 15px;
+            background: #00c6ff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Style for centering the heading */
+        
+        .contact-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="hero contact-section">
+        <div class="main-width">
+            <header>
+                <div class="logo">
+                    <span class="custom-logo">SK</span>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
+                                <i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                        </li>
+                        <li class="btn"><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="contact-container">
+                <div class="contact-box">
+                    <!-- Added the 'Let’s Connect' heading inside the contact-box and before the form -->
+                    <div class="contact-heading">
+                        Let’s Connect
+                    </div>
+
+                    <form style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button>Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p>📍 <strong>Location:</strong> Chennai, India</p>
+                        <p>📧 <strong>Email:</strong> santhoshselva873@gmail.com</p>
+                        <p><a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+                        <p><a href="https://github.com/SanthoshKumar-VS" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-github"></i> GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
