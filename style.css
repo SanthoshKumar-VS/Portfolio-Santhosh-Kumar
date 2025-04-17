@@ -7,18 +7,21 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+    /* Prevent scrolling */
 }
 
 .main-width {
-    max-width: 95%;
+    max-width: 100%;
+    /* Full screen width */
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .hero {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    /* Full screen height */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(back.jpg);
     background-size: cover;
     background-position: center;
@@ -26,7 +29,7 @@ body {
 }
 
 header {
-    padding: 20px 0 30px;
+    padding: 20px 0;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -112,7 +115,12 @@ nav .nav-list li.btn:hover a {
 }
 
 .container {
-    padding-top: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centering container */
+    text-align: center;
 }
 
 .container .hero-text {
@@ -247,7 +255,7 @@ span {
         margin-bottom: 40px;
     }
     .container {
-        margin-top: 180px;
+        margin-top: 150px;
     }
 }
 
@@ -273,7 +281,10 @@ span {
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-left: 10px;
+    justify-content: center;
+    /* Centering nav group */
+    margin-top: 20px;
+    /* Adjust the space from the text */
 }
 
 .circle-nav {
