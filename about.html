@@ -12,13 +12,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            font-family: 'Graduate', sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .center-nav {
+            margin-bottom: 30px;
+        }
+        
+        .circle-nav-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .circle-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #00c6ff;
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .text {
+            color: white;
+            max-width: 600px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100px);
+            animation: slideUp 1.5s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+        
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <section class="hero">
         <div class="main-width">
-
 
             <div class="container">
 
@@ -32,21 +93,19 @@
                     </div>
                 </nav>
 
-                <!-- About Text -->
-                <div class="text" style="color: white; max-width: 600px; text-align: center;">
+                <!-- About Text with animation -->
+                <div class="text">
                     <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">SANTHOSH KUMAR</h2>
                     <h5 style="font-size: 20px; color: #00c6ff; margin-bottom: 20px;">AIDS Student | Developer | Music Composer</h5>
                     <p style="line-height: 1.8;">
-
-
-                        I’m Santhosh, a passionate and curious Artificial Intelligence and Data Science student driven by the vision of using technology to create real-world impact. With a deep interest in solving everyday problems
-
+                        I’m Santhosh, a passionate and curious Artificial Intelligence and Data Science student driven by the vision of using technology to create real-world impact. With a deep interest in solving everyday problems, I’ve worked on a range of projects that merge
+                        innovation with purpose — including an Aadhaar-linked alcohol regulation system to promote responsible consumption, Citizen, an anti-corruption app to encourage transparency and accountability, and Edu Guard, a chatbot solution
+                        designed to improve student safety and communication in colleges.
                     </p>
                 </div>
-            </div>
-    </section>
 
-    </div>
+            </div>
+        </div>
     </section>
 
 </body>
