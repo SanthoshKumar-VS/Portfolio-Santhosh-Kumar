@@ -7,8 +7,6 @@
     <title>Santhosh Selva | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
     <style>
-        /* Base setup */
-        
         html,
         body {
             margin: 0;
@@ -20,11 +18,34 @@
             overflow-x: hidden;
             color: white;
         }
+        /* SK Circle - Top left */
+        
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .circle-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #555151;
+            color: rgb(248, 16, 16);
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(224, 219, 219, 0.6);
+        }
         /* Title animation */
         
         .header {
             text-align: center;
-            padding-top: 60px;
+            padding-top: 100px;
             animation: slideUp 2s ease-out forwards;
             opacity: 0;
         }
@@ -82,11 +103,18 @@
 
 <body>
 
+    <!-- SK circle on top-left -->
+    <div class="logo">
+        <a href="index.html" class="circle-nav">SK</a>
+    </div>
+
+    <!-- Header with name -->
     <div class="header">
         <h1>SANTHOSH KUMAR</h1>
         <h3><span class="highlight">AIDS Student</span> | <span class="highlight">Developer</span> | <span class="highlight">Music Composer</span></h3>
     </div>
 
+    <!-- Main content -->
     <div class="content">
         <p>
             Hello! I'm Santhosh Selva, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society. I've been involved in multiple projects, ranging from creating mobile
