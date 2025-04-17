@@ -2,70 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santhosh Selva | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
     <style>
+        /* Base setup */
+        
+        html,
         body {
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            height: 100%;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Graduate', sans-serif;
+            overflow-x: hidden;
+            color: white;
         }
+        /* Logo animation */
         
-        .container {
+        .logo-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .center-nav {
-            margin-bottom: 30px;
-        }
-        
-        .circle-nav-group {
-            display: flex;
             gap: 15px;
-            justify-content: center;
-        }
-        
-        .circle-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: #00c6ff;
-            border-radius: 50%;
-            text-decoration: none;
-            color: white;
+            font-size: 3.5rem;
             font-weight: bold;
+            padding: 40px 0;
+            animation: moveUp 2.5s ease forwards;
+            position: relative;
+            z-index: 10;
         }
         
-        .text {
-            color: white;
-            max-width: 600px;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(100px);
-            animation: slideUp 1.5s ease-out forwards;
-            animation-delay: 0.3s;
+        .logo-container span {
+            color: cyan;
+            text-shadow: 2px 2px 4px black;
         }
+        /* Animation Keyframes */
         
-        @keyframes slideUp {
+        @keyframes moveUp {
             0% {
-                transform: translateY(100px);
+                transform: translateY(100vh);
                 opacity: 0;
             }
             100% {
@@ -73,41 +50,71 @@
                 opacity: 1;
             }
         }
+        /* Content below */
+        
+        .content {
+            padding: 0 10%;
+            margin-top: 30px;
+            animation: fadeIn 3s ease 2s forwards;
+            opacity: 0;
+        }
+        /* Fade-in for content */
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 5px black;
+        }
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            color: #00FFFF;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            text-shadow: 1px 1px 2px black;
+        }
     </style>
 </head>
 
 <body>
+    <div class="logo-container">
+        <span>S</span>
+        <span>K</span>
+        <span>A</span>
+        <span>S</span>
+        <span>C</span>
+    </div>
 
-    <section class="hero">
-        <div class="main-width">
-
-            <div class="container">
-
-                <!-- Centered Navigation Links Above 'Hey Guys!' -->
-                <nav class="center-nav">
-                    <div class="circle-nav-group">
-                        <a href="index.html" class="circle-nav">SK</a>
-                        <a href="about.html" class="circle-nav">A</a>
-                        <a href="skills.html" class="circle-nav">S</a>
-                        <a href="contact.html" class="circle-nav">C</a>
-                    </div>
-                </nav>
-
-                <!-- About Text with animation -->
-                <div class="text">
-                    <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">SANTHOSH KUMAR</h2>
-                    <h5 style="font-size: 20px; color: #00c6ff; margin-bottom: 20px;">AIDS Student | Developer | Music Composer</h5>
-                    <p style="line-height: 1.8;">
-                        I’m Santhosh, a passionate and curious Artificial Intelligence and Data Science student driven by the vision of using technology to create real-world impact. With a deep interest in solving everyday problems, I’ve worked on a range of projects that merge
-                        innovation with purpose — including an Aadhaar-linked alcohol regulation system to promote responsible consumption, Citizen, an anti-corruption app to encourage transparency and accountability, and Edu Guard, a chatbot solution
-                        designed to improve student safety and communication in colleges.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
+    <div class="content">
+        <h1>SANTHOSH KUMAR</h1>
+        <h3><span class="highlight">AIDS Student</span> | <span class="highlight">Developer</span> | <span class="highlight">Music Composer</span></h3>
+        <p>
+            Hello! I'm Santhosh Selva, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society. I've been involved in multiple projects, ranging from creating mobile
+            apps like Citizen, aimed at fighting corruption, to developing solutions like Nilam, which connects farmers directly to customers.
+            <br><br> My academic journey is complemented by hands-on experience, such as completing the Google Cloud Study Jams course, participating in AI and ML workshops, and exploring fields like biometric integration for responsible alcohol regulation.
+            <br><br> I also have a strong affinity for music and sound design, which I apply to short films, where I’ve contributed by composing and editing music and sound effects.
+            <br><br> I'm always looking for ways to expand my knowledge, whether through participating in hackathons, working on chatbots like Edu Guard, or learning about emerging technologies like deepfake detection and cloud computing.
+            <br><br> I aim to use my skills to create meaningful solutions that benefit society and help solve real-world problems. In all my professional endeavors, I prioritize collaboration, creativity, and making a tangible difference.
+        </p>
+    </div>
 </body>
 
 </html>
