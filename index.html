@@ -5,12 +5,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santhosh Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Graduate', cursive;
+            text-decoration: none;
+        }
+        
+        body {
+            overflow: hidden;
+            /* Prevent scrolling */
+        }
+        
+        .main-width {
+            max-width: 100%;
+            /* Full screen width */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            width: 100%;
+            height: 100vh;
+            /* Full screen height */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(back.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        header {
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            height: 50px;
+            width: 50px;
+            background: transparent;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        nav .hamb {
+            width: 35px;
+            height: 24px;
+            right: 3%;
+            top: 60px;
+            z-index: 5;
+            background: white;
+            position: absolute;
+            cursor: pointer;
+            display: none;
+        }
+        
+        nav .hamb span {
+            display: block;
+            background: #ff0000;
+            width: 100%;
+            height: 3px;
+            transition: 0.3s;
+            transition-property: transform, opacity;
+        }
+        
+        nav .hamb span:nth-child(2) {
+            margin: 7px 0px;
+        }
+        
+        nav .nav-list {
+            list-style: none;
+        }
+        
+        nav .nav-list li {
+            display: inline-block;
+        }
+        
+        nav .nav-list li a {
+            display: inline-block;
+            cursor: pointer;
+            color: #eee;
+            margin-left: 55px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        nav .nav-list li:not(:last-child) a:hover {
+            color: #ff0000;
+            transition: 0.4s;
+        }
+        
+        nav .nav-list li.btn a {
+            background: transparent;
+            border: 2px solid #ff0000;
+            padding: 9px 28px;
+            border-radius: 30px;
+            line-height: 1.3;
+            color: #ff0000;
+            font-weight: 500;
+        }
+        
+        nav .nav-list li.btn:hover a {
+            background: #ff0000;
+            color: #eee;
+            border: 2px solid transparent;
+            transition: 0.4s;
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Centering container */
+            text-align: center;
+        }
+        
+        .container .hero-text {
+            margin-bottom: 40px;
+        }
+        
+        .container .hero-text h1 {
+            color: #eee;
+            font-size: 47px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 20px 0px 20px;
+        }
+        
+        span {
+            color: #ff0000;
+        }
+        
+        .container .hero-text h3 {
+            color: #eee;
+            font-weight: 400;
+            font-size: 17px;
+        }
+        
+        .container .hero-text p {
+            max-width: 100%;
+            color: #eee;
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        
+        .social a {
+            width: 37px;
+            height: 37px;
+            border-radius: 25%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: #eee;
+            cursor: pointer;
+            margin-right: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .social a:hover {
+            transform: scale(1.1);
+            background: #ff0000;
+            transition: 0.4s;
+        }
+        
+        .container .hero-text button {
+            color: #eee;
+            background: #ff0000;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            padding: 8px 30px;
+            border: 2px solid #ff0000;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        
+        .container .hero-text button:hover {
+            background: transparent;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            transition: 0.4s;
+        }
+        
+        .bottom {
+            margin-top: 100px;
+            padding-bottom: 40px;
+        }
+        
+        .bottom p {
+            color: #eee;
+            letter-spacing: 2px;
+            font-size: 15px;
+        }
+        /* Styles for Mobile View (max-width: 930px) */
+        
+        @media screen and (max-width: 930px) {
+            nav .hamb {
+                display: initial;
+            }
+            .click span {
+                position: absolute;
+                margin-top: 12px;
+            }
+            .click span:first-child {
+                transform: rotate(-40deg);
+            }
+            .click span:nth-child(2) {
+                opacity: 0;
+                margin: 0;
+            }
+            .click span:last-child {
+                transform: rotate(40deg);
+                top: 0;
+            }
+            nav .nav-list {
+                position: absolute;
+                top: 90px;
+                right: 0;
+                bottom: 0;
+                width: 60%;
+                height: 50%;
+                background: black;
+                z-index: 2;
+                padding: 6% 9%;
+                transition: 0.3s right;
+                border-radius: 10px;
+                display: none;
+            }
+            nav .nav-list.active {
+                display: block;
+            }
+            nav .nav-list li {
+                display: block;
+            }
+            nav .nav-list li a {
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 400;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+            .container {
+                margin-top: 150px;
+            }
+        }
+        /* Desktop view */
+        
+        @media screen and (min-width: 931px) {
+            nav .hamb {
+                display: none;
+            }
+        }
+        /* ---------------------------------------- */
+        /* NEW: Circle Navigation Links             */
+        /* ---------------------------------------- */
+        
+        .circle-nav-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .circle-nav {
+            width: 40px;
+            height: 40px;
+            border: 2px solid red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            color: red;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,8 +311,6 @@
                 <div class="logo-nav">
                     <!-- SK logo linking to About -->
                 </div>
-
-
 
                 <!-- Navigation Links moved above 'Hey Guys!' -->
                 <nav>
@@ -65,38 +352,20 @@
                 </div>
             </div>
 
+        </div>
+    </section>
 
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-            <script type="text/javascript" src="js/script.js"></script>
-            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Typed.js Script for Animation -->
+    <script>
+        var typed = new Typed(".input", {
+            strings: ["Santhosh Kumar", "final year Engineering student", "Software Engineer", "Film Maker", "Music Producer"],
+            typespeed: 5,
+            backspeed: 10,
+            loop: true
+        });
+    </script>
 
-            <!-- Typed.js Script for Animation -->
-            <script>
-                var typed = new Typed(".input", {
-                    strings: ["Santhosh Kumar", "final year Engineering student", "Software Engineer", "Film Maker", "Music Producer"],
-                    typespeed: 2,
-                    backspeed: 5,
-                    loop: true
-                });
-            </script>
-
-            <!-- Toggle Navigation Script -->
-            <script>
-                const menuToggle = document.getElementById('menu-toggle');
-                const navList = document.getElementById('nav-list');
-
-                // Toggle menu visibility on click
-                menuToggle.addEventListener('click', () => {
-                    navList.classList.toggle('active');
-                });
-
-                // Hamburger Menu Toggle Script
-                const hambMenu = document.querySelector('.click');
-                hambMenu.addEventListener('click', function() {
-                    navList.classList.toggle('active');
-                });
-            </script>
-
-</body>
-
-</html>
+    <!--
