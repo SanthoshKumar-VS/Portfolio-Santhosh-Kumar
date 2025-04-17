@@ -17,14 +17,16 @@
       font-family: 'Graduate', sans-serif;
       overflow-x: hidden;
       color: white;
+      scroll-behavior: smooth;
     }
 
-    /* SK Circle - Top left */
+    /* SK Circle - permanently fixed top-left */
     .logo {
       position: fixed;
       top: 20px;
       left: 20px;
-      z-index: 1000;
+      z-index: 9999;
+      background: transparent;
     }
 
     .circle-nav {
@@ -35,14 +37,14 @@
       height: 50px;
       border-radius: 50%;
       border: 2px solid #ff0000;
-      background-color: transparent;
       color: #ff0000;
       font-size: 20px;
       font-weight: bold;
       text-decoration: none;
+      background: transparent;
     }
 
-    /* Title animation */
+    /* Header */
     .header {
       text-align: center;
       padding-top: 100px;
@@ -99,23 +101,45 @@
       border-radius: 15px;
       text-shadow: 1px 1px 2px black;
     }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .circle-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- SK circle on top-left -->
+  <!-- Fixed SK logo -->
   <div class="logo">
     <a href="index.html" class="circle-nav">SK</a>
   </div>
 
-  <!-- Header with name -->
+  <!-- Header -->
   <div class="header">
     <h1>SANTHOSH KUMAR</h1>
     <h3><span class="highlight">AIDS Student</span> | <span class="highlight">Developer</span> | <span class="highlight">Music Composer</span></h3>
   </div>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <div class="content">
     <p>
       Hello! I'm Santhosh Selva, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society. I've been involved in multiple projects, ranging from creating mobile
