@@ -2,45 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santhosh Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 </head>
 
 <body>
+
     <section class="hero">
         <div class="main-width">
             <header>
                 <!-- Logo -->
-                <div class="logo">
-                    <span class="custom-logo">SK</span>
+                <div class="circle-nav-group">
+                    <a href="index.html" class="circle-nav">SK</a>
+                    <a href="about.html" class="circle-nav">A</a>
+                    <a href="skills.html" class="circle-nav">S</a>
+                    <a href="contact.html" class="circle-nav">C</a>
                 </div>
 
-                <!-- Empty nav header (you can use for mobile toggle if needed) -->
-                <nav>
-                    <ul class="nav-list" id="nav-list"></ul>
-                </nav>
+
+
+
+
+                <!-- Navigation Links moved above 'Hey Guys!' -->
+
             </header>
 
+            <!-- Hero Section with Navigation Above Text -->
+            <!-- Hero Section with Navigation Above Text -->
             <div class="container">
-                <!-- Centered Navigation Links ABOVE Hero Text -->
+
+                <!-- Centered Navigation Links Above 'Hey Guys!' -->
                 <nav class="center-nav">
                     <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About me</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li>
-                            <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
-                                <i class="fa-solid fa-file-arrow-down"></i> Resume
-                            </a>
-                        </li>
-                        <li class="btn"><a href="contact.html">Contact Me</a></li>
+
                     </ul>
                 </nav>
 
@@ -48,16 +49,12 @@
                 <div class="hero-text">
                     <h3>Hey, Guys !</h3>
                     <h1>I am <span class="input"></span></h1>
-                    <p>Engineering student, aspiring CTO</p><br />
+                    <p>Engineering student, aspiring CTO</p><br>
                     <div class="social">
-                        <a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/SanthoshKumar-VS" target="_blank"><i
-                                class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/SanthoshKumar-VS" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                     </div>
-                    <a href="https://www.linkedin.com/in/vssanthoshKumar" target="_blank">
-                        <button type="button">For more information</button>
-                    </a>
+                    <a href="https://www.linkedin.com/in/vssanthoshKumar" target="_blank"><button type="button">For more information</button></a>
                 </div>
 
                 <!-- Footer -->
@@ -65,47 +62,39 @@
                     <p>© 2025 Santhosh Portfolio - All Rights Reserved.</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Scripts -->
-        <script type="text/javascript" src="js/script.js"></script>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-        <!-- Typed.js Script for Animation -->
-        <script>
-            var typed = new Typed(".input", {
-                strings: [
-                    "Santhosh Kumar",
-                    "final year Engineering student",
-                    "Software Engineer",
-                    "Film Maker",
-                    "Music Producer",
-                ],
-                typespeed: 2,
-                backspeed: 5,
-                loop: true,
-            });
-        </script>
 
-        <!-- Toggle Navigation Script -->
-        <script>
-            const menuToggle = document.getElementById("menu-toggle");
-            const navList = document.getElementById("nav-list");
+            <script type="text/javascript" src="js/script.js"></script>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-            if (menuToggle) {
-                menuToggle.addEventListener("click", () => {
-                    navList.classList.toggle("active");
+            <!-- Typed.js Script for Animation -->
+            <script>
+                var typed = new Typed(".input", {
+                    strings: ["Santhosh Kumar", "final year Engineering student", "Software Engineer", "Film Maker", "Music Producer"],
+                    typespeed: 2,
+                    backspeed: 5,
+                    loop: true
                 });
-            }
+            </script>
 
-            const hambMenu = document.querySelector(".click");
-            if (hambMenu) {
-                hambMenu.addEventListener("click", function() {
-                    navList.classList.toggle("active");
+            <!-- Toggle Navigation Script -->
+            <script>
+                const menuToggle = document.getElementById('menu-toggle');
+                const navList = document.getElementById('nav-list');
+
+                // Toggle menu visibility on click
+                menuToggle.addEventListener('click', () => {
+                    navList.classList.toggle('active');
                 });
-            }
-        </script>
-    </section>
+
+                // Hamburger Menu Toggle Script
+                const hambMenu = document.querySelector('.click');
+                hambMenu.addEventListener('click', function() {
+                    navList.classList.toggle('active');
+                });
+            </script>
+
 </body>
 
 </html>
