@@ -2,154 +2,225 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Santhosh Selva | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: url('back.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Graduate', sans-serif;
-      overflow-x: hidden;
-      color: white;
-      scroll-behavior: smooth;
-    }
-
-    /* SK Circle - permanently fixed top-left */
-    .logo {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 9999;
-      background: transparent;
-    }
-
-    .circle-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #ff0000;
-      color: #ff0000;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      background: transparent;
-    }
-
-    /* Header */
-    .header {
-      text-align: center;
-      padding-top: 100px;
-      animation: slideUp 2s ease-out forwards;
-      opacity: 0;
-    }
-
-    @keyframes slideUp {
-      0% {
-        transform: translateY(100px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      text-shadow: 2px 2px 5px black;
-    }
-
-    h3 {
-      margin-top: 15px;
-      font-size: 1.4rem;
-    }
-
-    .highlight {
-      color: #00FFFF;
-    }
-
-    .content {
-      padding: 0 10%;
-      margin-top: 40px;
-      animation: fadeIn 2s ease 2s forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      text-align: justify;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-      text-shadow: 1px 1px 2px black;
-    }
-
-    /* Responsive adjustments */
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-      }
-
-      .circle-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 1rem;
-        padding: 15px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santhosh Selva | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Graduate', sans-serif;
+            overflow-x: hidden;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+        }
+        
+        .circle-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            background: transparent;
+        }
+        
+        .header {
+            text-align: center;
+            padding-top: 100px;
+            animation: slideUp 2s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+        }
+        
+        h3 {
+            margin-top: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .highlight {
+            color: #00FFFF;
+        }
+        
+        .content {
+            padding: 0 10%;
+            margin-top: 40px;
+            animation: fadeIn 2s ease 2s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            text-shadow: 1px 1px 2px black;
+        }
+        
+        .scroll-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00FFFF;
+            text-decoration: underline;
+            text-align: center;
+            transition: color 0.3s;
+        }
+        
+        .scroll-link:hover {
+            color: #ffcc00;
+        }
+        
+        .projects-section {
+            padding: 60px 10%;
+            margin-top: 60px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+        }
+        
+        .projects-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #00FFFF;
+        }
+        
+        .project-card {
+            background-color: #1f1f1f;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .project-card h3 {
+            color: #00c6ff;
+            margin-bottom: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+            .circle-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            p {
+                font-size: 1rem;
+                padding: 15px;
+            }
+            .projects-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Fixed SK logo -->
-  <div class="logo">
-    <a href="index.html" class="circle-nav">SK</a>
-  </div>
+    <!-- Fixed SK logo -->
+    <div class="logo">
+        <a href="index.html" class="circle-nav">SK</a>
+    </div>
 
-  <!-- Header -->
-  <div class="header">
-    <h1>SANTHOSH KUMAR</h1>
-    <h3><span class="highlight">AIDS Student</span> | <span class="highlight">Developer</span> | <span class="highlight">Music Composer</span></h3>
-  </div>
+    <!-- Header -->
+    <div class="header">
+        <h1>SANTHOSH KUMAR</h1>
+        <h3><span class="highlight">AIDS Student</span> | <span class="highlight">Developer</span> | <span class="highlight">Music Composer</span></h3>
+    </div>
 
-  <!-- Main Content -->
-  <div class="content">
-    <p>
-      Hello! I'm Santhosh, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society. I've been involved in multiple projects, ranging from creating mobile
-      apps like Citizen, aimed at fighting corruption, to developing solutions like Nilam, which connects farmers directly to customers.
-      <br><br> My academic journey is complemented by hands-on experience, such as completing the Google Cloud Study Jams course, participating in AI and ML workshops, and exploring fields like biometric integration for responsible alcohol regulation.
-      <br><br> I also have a strong affinity for music and sound design, which I apply to short films, where I’ve contributed by composing and editing music and sound effects.
-      <br><br> I'm always looking for ways to expand my knowledge, whether through participating in hackathons, working on chatbots like Edu Guard, or learning about emerging technologies like deepfake detection and cloud computing.
-      <br><br> I aim to use my skills to create meaningful solutions that benefit society and help solve real-world problems. In all my professional endeavors, I prioritize collaboration, creativity, and making a tangible difference.
-    </p>
-  </div>
+    <!-- About Section -->
+    <div class="content" id="about">
+        <p>
+            Hello! I'm Santhosh Selva, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society...
+            <br><br> I aim to use my skills to create meaningful solutions that benefit society and help solve real-world problems. In all my professional endeavors, I prioritize collaboration, creativity, and making a tangible difference.
+        </p>
+
+        <!-- Scroll to Projects Button -->
+        <div style="text-align: center;">
+            <a href="#projects" class="scroll-link">View My Projects ↓</a>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Citizen – Anti-Corruption App</h3>
+            <p>Empowers users to anonymously report bribery and corruption. Tracks case status and ensures privacy.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Aadhaar-Linked Alcohol Regulation System</h3>
+            <p>Biometric system to limit alcohol purchases based on health safety and consumption history.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Edu Guard – College Info Chatbot</h3>
+            <p>Web app chatbot helping students find colleges by fee, placements, hostel, food, etc., with real-time updates.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Nilam – Farmer to Customer App</h3>
+            <p>Connects farmers with local customers directly. Allows farmers to set prices and post produce details.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Traffic Monitoring Demo</h3>
+            <p>Camera-based traffic demo to visualize and present smart traffic control ideas for hackathons/judges.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Deepfake Detection Model <span style="color: #ff9800;">(In Progress)</span></h3>
+            <p>AI model idea to identify manipulated media and differentiate real from deepfake videos.</p>
+        </div>
+    </div>
 
 </body>
 
