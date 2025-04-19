@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
     <style>
         body,
@@ -20,23 +21,24 @@
             font-family: 'Graduate', cursive;
             overflow: hidden;
         }
-
+        
         .contact-section {
             display: flex;
             flex-direction: column;
             height: 100vh;
             background-color: #121212;
         }
-
+        
         .contact-container {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             padding: 60px 20px;
-            overflow-y: auto; /* enables vertical scrolling */
+            overflow-y: auto;
+            /* enables vertical scrolling */
         }
-
+        
         .contact-box {
             display: flex;
             justify-content: center;
@@ -51,7 +53,7 @@
             box-shadow: 0 0 20px rgba(0, 198, 255, 0.2);
             flex-direction: column;
         }
-
+        
         .contact-info {
             background-color: #2b2b2b;
             padding: 30px;
@@ -61,7 +63,7 @@
             width: 100%;
             text-align: left;
         }
-
+        
         input,
         textarea {
             background-color: #2b2b2b;
@@ -71,12 +73,12 @@
             border: none;
             width: 100%;
         }
-
+        
         input::placeholder,
         textarea::placeholder {
             color: #aaa;
         }
-
+        
         button {
             padding: 15px;
             background: #00c6ff;
@@ -87,7 +89,7 @@
             cursor: pointer;
             width: 100%;
         }
-
+        
         .contact-heading {
             text-align: center;
             font-size: 24px;
@@ -95,7 +97,7 @@
             color: white;
             margin-bottom: 20px;
         }
-
+        
         form {
             flex: 1;
             min-width: 300px;
@@ -104,28 +106,24 @@
             gap: 20px;
             width: 100%;
         }
-
+        
         @media (max-width: 600px) {
             .contact-container {
                 padding: 30px 10px;
             }
-
             .contact-box {
                 padding: 25px 20px;
                 gap: 30px;
             }
-
             .contact-heading {
                 font-size: 20px;
             }
-
             input,
             textarea,
             button {
                 font-size: 15px;
                 padding: 12px;
             }
-
             .contact-info {
                 padding: 20px;
                 font-size: 14px;
@@ -141,10 +139,10 @@
         <div class="main-width">
             <header>
                 <a href="index.html" class="circle-nav">SK</a>
-            </div>
-            <nav>
-                <ul class="nav-list"></ul>
-            </nav>
+        </div>
+        <nav>
+            <ul class="nav-list"></ul>
+        </nav>
         </header>
 
         <div class="contact-container">
