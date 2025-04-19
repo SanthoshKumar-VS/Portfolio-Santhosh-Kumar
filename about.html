@@ -111,12 +111,26 @@
         .scroll-link:hover {
             color: #ffcc00;
         }
+        /* Projects Section Styling */
         
         .projects-section {
             padding: 60px 10%;
             margin-top: 60px;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 20px;
+            animation: floatSection 2s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes floatSection {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
         .projects-section h2 {
@@ -131,6 +145,19 @@
             padding: 25px;
             border-radius: 20px;
             margin-bottom: 20px;
+            animation: floatProject 1s ease-in-out infinite;
+        }
+        
+        @keyframes floatProject {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
         }
         
         .project-card h3 {
@@ -158,6 +185,21 @@
                 font-size: 28px;
             }
         }
+        
+        .project-card {
+            background-color: #1f1f1f;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            animation: floatProject 4s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover,
+        .project-card:active {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px #00ffff80;
+        }
     </style>
 </head>
 
@@ -177,8 +219,8 @@
     <!-- About Section -->
     <div class="content" id="about">
         <p>
-            Hello! I'm Santhosh, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society...
-            <br><br> I aim to use my skills to create meaningful solutions that benefit society and help solve real-world problems. I prioritize collaboration, creativity, and making a tangible difference.
+            Hello! I'm Santhosh Selva, a passionate engineering student currently in my pre-final year. I have a deep interest in technology, innovation, and making a positive impact on society...
+            <br><br> I aim to use my skills to create meaningful solutions that benefit society and help solve real-world problems. In all my professional endeavors, I prioritize collaboration, creativity, and making a tangible difference.
         </p>
 
         <!-- Scroll to Projects Button -->
@@ -213,7 +255,7 @@
 
         <div class="project-card">
             <h3>Traffic Monitoring Demo</h3>
-            <p>Camera-based traffic demo to visualize and present smart traffic control</p>
+            <p>Camera-based traffic demo to visualize and present smart traffic control ideas for hackathons/judges.</p>
         </div>
 
         <div class="project-card">
