@@ -2,273 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Santhosh Selva | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: url('back.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Graduate', sans-serif;
-            overflow-x: hidden;
-            color: white;
-            scroll-behavior: smooth;
-        }
-        
-        .logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 9999;
-        }
-        
-        .circle-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid #ff0000;
-            color: #ff0000;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            background: transparent;
-        }
-        
-        .header {
-            text-align: center;
-            padding-top: 100px;
-            animation: slideUp 2s ease-out forwards;
-            opacity: 0;
-        }
-        
-        @keyframes slideUp {
-            0% {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            text-shadow: 2px 2px 5px black;
-        }
-        
-        h3 {
-            margin-top: 15px;
-            font-size: 1.4rem;
-        }
-        
-        .highlight {
-            color: #00FFFF;
-        }
-        
-        .content {
-            padding: 0 10%;
-            margin-top: 40px;
-            animation: fadeIn 2s ease 2s forwards;
-            opacity: 0;
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-        
-        p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: justify;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 15px;
-            text-shadow: 1px 1px 2px black;
-        }
-        
-        .scroll-link {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #ffcc00;
-            text-decoration: underline;
-            text-align: center;
-            transition: color 0.3s;
-        }
-        
-        .scroll-link:hover {
-            color: #ff0000;
-        }
-        /* Projects Section Styling */
-        
-        .projects-section {
-            padding: 60px 10%;
-            margin-top: 60px;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 20px;
-            animation: floatSection 2s ease-out forwards;
-            opacity: 0;
-        }
-        
-        @keyframes floatSection {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .projects-section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: white;
-        }
-        
-        .project-card {
-            background-color: #1f1f1f;
-            padding: 25px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            animation: floatProject 1s ease-in-out infinite;
-        }
-        
-        @keyframes floatProject {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-        
-        .project-card h3 {
-            color: #00c6ff;
-            margin-bottom: 10px;
-        }
-        
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            h3 {
-                font-size: 1.1rem;
-            }
-            .circle-nav {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
-            p {
-                font-size: 1rem;
-                padding: 15px;
-            }
-            .projects-section h2 {
-                font-size: 28px;
-            }
-        }
-        
-        .project-card {
-            background-color: #1f1f1f;
-            padding: 25px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            animation: floatProject 4s ease-in-out infinite;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover,
-        .project-card:active {
-            transform: scale(1.03);
-            box-shadow: 0 0 25px #00ffff80;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <!-- Fixed SK logo -->
-    <div class="logo">
-        <a href="index.html" class="circle-nav">SK</a>
+<section class="hero">
+    <div class="main-width">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="custom-logo">SK</span>
+            </div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing"
+                           target="_blank">
+                            <i class="fa-solid fa-file-arrow-down"></i> Resume
+                        </a>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li class="btn"><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Projects Section -->
+        <section class="projects-section" style="padding: 50px 0;">
+            <div class="main-width" style="text-align: center; color: white;">
+
+                <h2 style="font-size: 36px; margin-bottom: 40px;">My Projects</h2>
+
+                <div style="display: flex; flex-direction: column; gap: 30px; align-items: center; max-width: 900px; margin: auto;">
+
+                    <!-- UI/UX Project : Nilam -->
+                    <a href="https://www.figma.com/design/dkFJ8AX5CFqxCrlAIjcfY4/Untitled?node-id=0-1&t=WEOpphDKhBzGxfSM-1"
+                       target="_blank" style="text-decoration: none; width: 100%;">
+                        <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                            <h3 style="color: #00c6ff;">Nilam – Farmer to Customer App (UI/UX Design)</h3>
+                            <p style="color: #ddd;">
+                                A mobile app UI/UX design that connects farmers directly with customers,
+                                focused on simplicity, accessibility, and smooth user flow.
+                            </p>
+                            <p style="color: #ff0000; margin-top: 10px;">🔗 View Design on Figma</p>
+                        </div>
+                    </a>
+
+                    <!-- UI/UX Project : Grand Master -->
+                    <a href="https://www.figma.com/design/3BC4z3hdP9nFWSeEknZnB0/game?node-id=0-1&t=sZgqkMPA842dYprX-1"
+                       target="_blank" style="text-decoration: none; width: 100%;">
+                        <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                            <h3 style="color: #00c6ff;">Grand Master – Game UI Design</h3>
+                            <p style="color: #ddd;">
+                                A game UI design with engaging visuals, clear navigation,
+                                and immersive gameplay interface.
+                            </p>
+                            <p style="color: #ff0000; margin-top: 10px;">🎮 View Game UI on Figma</p>
+                        </div>
+                    </a>
+
+                    <!-- Other Projects -->
+                    <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                        <h3 style="color: #00c6ff;">Citizen – Anti-Corruption App</h3>
+                        <p style="color: #ddd;">Anonymous reporting app for bribery and corruption.</p>
+                    </div>
+
+                    <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                        <h3 style="color: #00c6ff;">Aadhaar-Linked Alcohol Regulation System</h3>
+                        <p style="color: #ddd;">Biometric system to regulate alcohol purchases.</p>
+                    </div>
+
+                    <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                        <h3 style="color: #00c6ff;">Edu Guard – College Info Chatbot</h3>
+                        <p style="color: #ddd;">Chatbot to help students choose colleges.</p>
+                    </div>
+
+                    <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                        <h3 style="color: #00c6ff;">Traffic Monitoring Demo</h3>
+                        <p style="color: #ddd;">Traffic visualization concept for smart cities.</p>
+                    </div>
+
+                    <div style="background-color: #1f1f1f; padding: 25px; border-radius: 20px;">
+                        <h3 style="color: #00c6ff;">Deepfake Detection Model (In Progress)</h3>
+                        <p style="color: #ddd;">AI model to detect manipulated media.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </div>
-
-    <!-- Header -->
-    <div class="header">
-        <h1>SANTHOSH KUMAR</h1>
-        <h3><span class="highlight">AIDS Student</span> | <span class="highlight">UI/UX Designer</span> | <span class="highlight">Developer</span></h3>
-    </div>
-
-    <!-- About Section -->
-    <!-- About Section -->
-<div class="content" id="about">
-    <p>
-        Hello! I'm Santhosh, a passionate engineering student in my final year with a strong interest in UI/UX design. I enjoy creating intuitive, user-centered digital experiences by combining design thinking with technical knowledge.
-        <br><br>My background in engineering helps me approach problems logically, while my passion for filmmaking enhances my creativity, visual storytelling, and attention to detail. I love transforming ideas into meaningful designs that are both functional and visually engaging.
-    </p>
-</div>
-
-
-        <!-- Scroll to Projects Button -->
-        <div style="text-align: center;">
-            <a href="#projects" class="scroll-link">View My Projects ↓</a>
-        </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="projects-section" id="projects">
-        <h2>Projects</h2>
-
-        <div class="project-card">
-            <h3>Anti Indians–Unmasking Corrupt Officials</h3>
-            <p>Report Bribery and Corruption Anonymously with Solid Proof, Track Case Status, and Ensure Privacy.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Citizen-Aadhaar Linked Alcohol Regulation System</h3>
-            <p>Biometric system to limit alcohol purchases based on health safety and consumption history.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Edu Guard – College Info Chatbot</h3>
-            <p>Web app chatbot helping students find colleges by fee, placements, hostel, food, etc., with real-time updates.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Nilam – Farmer to Customer App</h3>
-            <p>Connects farmers directly with local customers, eliminating middlemen. Allows farmers to set their own prices and post product details.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Emergency First: Camera-Based Smart Traffic Management</h3>
-            <p>a camera-based smart traffic control system that prioritizes emergency vehicles like ambulances, ensuring they do not get stuck in traffic.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Deepfake Detection Model <span style="color: #ff9800;">(In Progress)</span></h3>
-            <p>AI model idea to identify manipulated media and differentiate real from deepfake videos.</p>
-        </div>
-    </div>
+</section>
 
 </body>
-
 </html>
-
-
 
