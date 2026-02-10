@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         body,
@@ -22,11 +21,13 @@
             overflow: hidden;
         }
         
+        /* Ensure the main container scrolls if content is too tall */
         .contact-section {
             display: flex;
             flex-direction: column;
             height: 100vh;
             background-color: #121212;
+            overflow-y: auto;
         }
         
         .contact-container {
@@ -35,8 +36,7 @@
             justify-content: center;
             align-items: flex-start;
             padding: 30px 20px;
-            /* Reduced from 60px to 30px */
-            overflow-y: auto;
+            overflow-y: auto; /* Scroll inside container if needed */
         }
         
         .contact-box {
@@ -137,37 +137,66 @@
 
     <section class="hero">
         <div class="main-width">
+            
             <header>
-                <a href="index.html" class="circle-nav">SK</a>
-        </div>
-        <nav>
-            <ul class="nav-list"></ul>
-        </nav>
-        </header>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <span class="custom-logo">SK</span>
+                </a>
 
-        <div class="contact-container">
-            <div class="contact-box">
-                <div class="contact-heading">
-                    Let’s Connect
-                </div>
+                <nav>
+                    <div class="hamb" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                <form>
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <textarea rows="5" placeholder="Your Message"></textarea>
-                    <button>Send Message</button>
-                </form>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1BKVLySz_zS5N4DaYDO10czDRt6cAXOre/view?usp=drivesdk" target="_blank">
+                                <i class="fa-solid fa-file-arrow-down"></i> Resume
+                            </a>
+                        </li>
+                        <li class="btn"><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-                <div class="contact-info">
-                    <p><span style="color: #ff0000;">🌍</span> <strong style="color: white;">Location:</strong> <span style="color: white;">Chennai, India</span></p>
-                    <p><a href="mailto:santhoshselva873@gmail.com" style="color: #ff0000;"><i class="fa fa-envelope" style="color: #ff0000;"></i> <span style="color: #00c6ff;">Gmail</span></a></p>
-                    <p><a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-linkedin" style="color: #00c6ff;"></i> <span style="color: #00c6ff;">LinkedIn</span></a></p>
-                    <p><a href="https://github.com/SanthoshKumar-VS" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-github" style="color: white;"></i> <span style="color: #00c6ff;">GitHub</span></a></p>
+            <div class="contact-container">
+                <div class="contact-box">
+                    <div class="contact-heading">
+                        Let’s Connect
+                    </div>
+
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button>Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p><span style="color: #ff0000;">🌍</span> <strong style="color: white;">Location:</strong> <span style="color: white;">Chennai, India</span></p>
+                        <p><a href="mailto:santhoshselva873@gmail.com" style="color: #ff0000;"><i class="fa fa-envelope" style="color: #ff0000;"></i> <span style="color: #00c6ff;">Gmail</span></a></p>
+                        <p><a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-linkedin" style="color: #00c6ff;"></i> <span style="color: #00c6ff;">LinkedIn</span></a></p>
+                        <p><a href="https://github.com/SanthoshKumar-VS" target="_blank" style="color: #00c6ff;"><i class="fa-brands fa-github" style="color: white;"></i> <span style="color: #00c6ff;">GitHub</span></a></p>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
-</body>
+    <script>
+        function toggleMenu() {
+            var hamb = document.querySelector('.hamb');
+            var nav = document.querySelector('.nav-list');
+            hamb.classList.toggle('click');
+            nav.classList.toggle('active');
+        }
+    </script>
 
+</body>
 </html>
