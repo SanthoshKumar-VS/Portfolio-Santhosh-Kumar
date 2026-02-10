@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         * {
@@ -21,13 +20,13 @@
         }
         
         body {
-            overflow: hidden;
-            /* Prevent scrolling */
+            /* ALLOW SCROLLING if content overflows, otherwise hidden for hero feel */
+            overflow-x: hidden;
+            overflow-y: auto; 
         }
         
         .main-width {
             max-width: 100%;
-            /* Full screen width */
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -35,7 +34,6 @@
         .hero {
             width: 100%;
             height: 100vh;
-            /* Full screen height */
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(back.jpg);
             background-size: cover;
             background-position: center;
@@ -48,6 +46,8 @@
             flex-wrap: nowrap;
             align-items: center;
             justify-content: space-between;
+            position: relative; /* Ensure header is positioned for absolute children */
+            z-index: 10;
         }
         
         .logo {
@@ -64,13 +64,14 @@
             cursor: pointer;
         }
         
+        /* Mobile Menu Icon (Hamburger) */
         nav .hamb {
             width: 35px;
             height: 24px;
-            right: 3%;
-            top: 60px;
+            right: 20px; /* Adjusted right position */
+            top: 35px; /* Adjusted top to align better with logo */
             z-index: 5;
-            background: white;
+            background: transparent; /* Changed from white to transparent */
             position: absolute;
             cursor: pointer;
             display: none;
@@ -89,6 +90,7 @@
             margin: 7px 0px;
         }
         
+        /* Nav List Styling */
         nav .nav-list {
             list-style: none;
         }
@@ -101,7 +103,7 @@
             display: inline-block;
             cursor: pointer;
             color: #eee;
-            margin-left: 55px;
+            margin-left: 55px; /* Spacing between links */
             font-size: 15px;
             font-weight: 600;
         }
@@ -111,6 +113,7 @@
             transition: 0.4s;
         }
         
+        /* Contact Me Button Style */
         nav .nav-list li.btn a {
             background: transparent;
             border: 2px solid #ff0000;
@@ -133,8 +136,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            /* Centering container */
             text-align: center;
+            width: 100%; /* Ensure container takes width for centering */
         }
         
         .container .hero-text {
@@ -149,7 +152,7 @@
             margin: 20px 0px 20px;
         }
         
-        span {
+        span.input {
             color: #ff0000;
         }
         
@@ -217,12 +220,14 @@
             letter-spacing: 2px;
             font-size: 15px;
         }
-        /* Styles for Mobile View (max-width: 930px) */
         
+        /* Styles for Mobile View (max-width: 930px) */
         @media screen and (max-width: 930px) {
             nav .hamb {
-                display: initial;
+                display: block; /* Show hamburger on mobile */
             }
+            
+            /* Animation for hamburger click */
             .click span {
                 position: absolute;
                 margin-top: 12px;
@@ -238,66 +243,45 @@
                 transform: rotate(40deg);
                 top: 0;
             }
+            
             nav .nav-list {
-                position: absolute;
-                top: 90px;
-                right: 0;
+                position: fixed; /* Fixed to cover screen or relative to container */
+                top: 0;
+                right: -100%; /* Hide off-screen by default */
                 bottom: 0;
-                width: 60%;
-                height: 50%;
-                background: black;
-                z-index: 2;
-                padding: 6% 9%;
-                transition: 0.3s right;
-                border-radius: 10px;
-                display: none;
-            }
-            nav .nav-list.active {
+                width: 70%; /* Width of the mobile menu */
+                height: 100vh;
+                background: #000; /* Black background for menu */
+                z-index: 100;
+                padding: 100px 50px; /* Padding for links inside */
+                transition: 0.4s ease;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
                 display: block;
             }
+            
+            nav .nav-list.active {
+                right: 0; /* Slide in */
+            }
+            
             nav .nav-list li {
                 display: block;
+                margin-bottom: 30px;
             }
+            
             nav .nav-list li a {
                 display: block;
-                text-align: center;
-                font-size: 18px;
-                font-weight: 400;
+                text-align: left;
+                font-size: 20px;
                 margin-left: 0;
-                margin-bottom: 40px;
-            }
-            .container {
-                margin-top: 150px;
             }
         }
-        /* Desktop view */
         
+        /* Desktop view */
         @media screen and (min-width: 931px) {
             nav .hamb {
                 display: none;
             }
-        }
-        /* ---------------------------------------- */
-        /* NEW: Circle Navigation Links             */
-        /* ---------------------------------------- */
-        
-        .circle-nav-group {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        
-        .circle-nav {
-            width: 40px;
-            height: 40px;
-            border: 2px solid red;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            color: red;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -306,39 +290,40 @@
 
     <section class="hero">
         <div class="main-width">
+            
             <header>
-                <!-- Logo -->
-                <div class="logo-nav">
-                    <!-- SK logo linking to About -->
-                </div>
+                <a href="index.html" class="logo">
+                    SK
+                </a>
 
-                <!-- Navigation Links moved above 'Hey Guys!' -->
                 <nav>
-                    <ul class="nav-list" id="nav-list">
+                    <div class="hamb" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
+                                <i class="fa-solid fa-file-arrow-down"></i> Resume
+                            </a>
+                        </li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li class="btn"><a href="contact.html">Contact Me</a></li>
                     </ul>
                 </nav>
             </header>
 
-            <!-- Hero Section with Navigation Above Text -->
-            <!-- Hero Section with Navigation Above Text -->
             <div class="container">
-
-                <!-- Centered Navigation Links Above 'Hey Guys!' -->
-                <nav class="center-nav">
-                    <div class="circle-nav-group">
-                        <a href="index.html" class="circle-nav">SK</a>
-                        <a href="about.html" class="circle-nav">A</a>
-                        <a href="skills.html" class="circle-nav">S</a>
-                        <a href="contact.html" class="circle-nav">C</a>
-                    </div>
-                </nav>
-
-                <!-- Hero Text -->
                 <div class="hero-text">
                     <h3>Hello Squad</h3>
                     <h1>I am <span class="input"></span></h1>
                     <p>Engineering student, aspiring Film Maker</p><br>
+                    
                     <div class="social">
                         <a href="https://www.linkedin.com/in/vssanthoshkumar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/SanthoshKumar-VS" target="_blank"><i class="fa-brands fa-square-github"></i></a>
@@ -348,12 +333,8 @@
                     <a href="https://drive.google.com/file/d/1Zs4XqqRNKJMohcMAZTJbDo0PzQR1ahEw/view?usp=sharing" target="_blank">
                         <button type="button">For more information</button>
                     </a>
-
-
-
                 </div>
 
-                <!-- Footer -->
                 <div class="bottom">
                     <p>© 2025 Santhosh Portfolio - All Rights Reserved.</p>
                 </div>
@@ -362,19 +343,24 @@
         </div>
     </section>
 
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- Typed.js Script for Animation -->
     <script>
-    var typed = new Typed(".input", {
-        strings: ["Santhosh Kumar", "UI/UX Designer"],
-        typeSpeed: 20,
-        backSpeed: 15,
-        loop: true
-    });
-</script>
+        function toggleMenu() {
+            var hamb = document.querySelector('.hamb');
+            var nav = document.querySelector('.nav-list');
+            hamb.classList.toggle('click');
+            nav.classList.toggle('active');
+        }
+    </script>
+    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".input", {
+            strings: ["Santhosh Kumar", "UI/UX Designer"],
+            typeSpeed: 60,   /* Adjusted speed for better readability */
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
 
-
-    <!--
-
+</body>
+</html>
