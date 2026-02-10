@@ -21,6 +21,12 @@
                 </a>
 
                 <nav>
+                    <div class="hamb" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About me</a></li>
@@ -44,6 +50,7 @@
                             </p>
                         </div>
                     </div>
+                    
                     <h2 style="font-size: 36px; margin-bottom: 40px;">My Projects</h2>
 
                     <div style="display: flex; flex-direction: column; gap: 30px; align-items: center; max-width: 900px; margin: auto;">
@@ -94,6 +101,15 @@
             </section>
         </div>
     </section>
+
+    <script>
+        function toggleMenu() {
+            var hamb = document.querySelector('.hamb');
+            var nav = document.querySelector('.nav-list');
+            hamb.classList.toggle('click');
+            nav.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
